@@ -1,8 +1,9 @@
 {
   "name": "get-node-dimensions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Get accurate element dimensions, even if it's hidden!",
   "main": "lib/get-node-dimensions.js",
+  "files": ["dist", "lib"],
   "scripts": {
     "build": "npm run build:lib && NODE_ENV=production webpack --config webpack.config.js",
     "build:lib": "babel src --out-dir lib --stage 0",
