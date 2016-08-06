@@ -1,0 +1,28 @@
+{
+  "name": "get-node-dimensions",
+  "version": "0.1.0",
+  "homepage": "https://github.com/souporserious/get-node-dimensions",
+  "authors": [
+    "Travis Arnold <ftntravis@gmail.com>"
+  ],
+  "description": "Get accurate element dimensions, even if it's hidden!",
+  "main": ["./dist/get-node-dimensions.js", "./dist/get-node-dimensions.min.js"],
+  "keywords": [
+    "dimensions",
+    "measure node",
+    "measure element",
+    "width",
+    "height",
+    "hidden element width",
+    "hidden element height",
+    "actual"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
