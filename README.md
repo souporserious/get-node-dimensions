@@ -11,7 +11,7 @@ Get accurate element dimensions, even if it's hidden!
 `bower install get-node-dimensions --save`
 
 ```html
-<script src="https://npmcdn.com/get-node-dimensions/dist/get-node-dimensions.js"></script>
+<script src="https://unpkg.com/get-node-dimensions/dist/get-node-dimensions.js"></script>
 (UMD library exposed as `getNodeDimensions`)
 ```
 
