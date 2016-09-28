@@ -2,7 +2,7 @@ export default function getCloneDimensions(node, options) {
   const { parentNode } = node
   const context = document.createElement('div')
   const clone = node.cloneNode(true)
-  const style = getComputedStyle(clone)
+  const style = getComputedStyle(node)
   let rect = {}
 
   // give the node some context to measure off of
