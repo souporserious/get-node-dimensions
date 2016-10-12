@@ -53,7 +53,7 @@ describe('get proper node dimensions', () => {
     changingNode.style.top = '30px'
     changingNode.style.left = '30px'
 
-    const postDimensions = getNodeDimensions(changingNode)
+    const postDimensions = getNodeDimensions(changingNode, { clone: true })
     changingNode.style.display = ''
     expect(postDimensions.width).toEqual(150)
     expect(postDimensions.height).toEqual(600)
