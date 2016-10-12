@@ -2,7 +2,7 @@ export default function getCloneDimensions(node, options) {
   const { parentNode } = node
   const context = document.createElement('div')
   const clone = node.cloneNode(true)
-  const style = getComputedStyle(clone)
+  const style = getComputedStyle(node)
   let rect = {}
 
   // give the node some context to measure off of
@@ -16,7 +16,9 @@ export default function getCloneDimensions(node, options) {
   clone.setAttribute('name', '')
 
   // set props to get a true dimension calculation
-  clone.style.display = options.display || style.getPropertyValue('display')
+  if (style.getPropertyValue('display') === 'none') {
+    clone.style.display = options.display || 'block'
+  }
   if (style.getPropertyValue('width') !== '') {
     clone.style.width = 'auto'
   }
