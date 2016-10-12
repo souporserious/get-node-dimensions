@@ -1,6 +1,6 @@
 {
   "name": "get-node-dimensions",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Get accurate element dimensions, even if it's hidden!",
   "main": "lib/get-node-dimensions.js",
   "files": ["dist", "lib"],
