@@ -8,8 +8,6 @@ Get accurate element dimensions, even if it's hidden!
 
 `npm install get-node-dimensions --save`
 
-`bower install get-node-dimensions --save`
-
 ```html
 <script src="https://unpkg.com/get-node-dimensions/dist/get-node-dimensions.js"></script>
 (UMD library exposed as `getNodeDimensions`)
