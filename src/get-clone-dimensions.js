@@ -19,10 +19,10 @@ export default function getCloneDimensions(node, options) {
   if (style.getPropertyValue('display') === 'none') {
     clone.style.display = options.display || 'block'
   }
-  if (style.getPropertyValue('width') !== '') {
+  if (!parseInt(style.getPropertyValue('width'))) {
     clone.style.width = 'auto'
   }
-  if (style.getPropertyValue('height') !== '') {
+  if (!parseInt(style.getPropertyValue('height'))) {
     clone.style.height = 'auto'
   }
 
