@@ -1,4 +1,9 @@
 ## CHANGELOG
+### 1.1.0
+Allow width and height to be set on clone using options
+
+Use width/height when measuring clone so transforms don't give inaccurate dimensions
+
 ### 1.0.0
 Use original node to get style information because clone returns nothing
 

@@ -19,5 +19,17 @@ Get accurate element dimensions, even if it's hidden!
 import getNodeDimensions from 'get-node-dimensions'
 
 const div = document.getElementById('div-to-measure')
-getNodeDimensions(div) // { width, height, top, right, bottom, left }
+
+console.log(getNodeDimensions(div)) // { width, height, top, right, bottom, left }
 ```
+
+## Usage
+
+### elementDimensions = getNodeDimensions(element[, options])
+
+Returns element rect which includes `width`, `height`, `top`, `right`, `bottom`, `left`.
+
+`createOptions`:
+
+- **clone** {bool}: Whether or not to use a clone to measure. If no width/height found, the element will automatically be cloned in order to obtain proper dimensions
+- **display|width|height** {string}: sets respective clone property
