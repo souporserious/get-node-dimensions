@@ -1,4 +1,7 @@
 ## CHANGELOG
+### 1.2.0
+Account for margins
+
 ### 1.1.0
 Allow width and height to be set on clone using options
 

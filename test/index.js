@@ -4,6 +4,12 @@ const textNode = document.createElement('div')
 textNode.innerHTML = 'node text'
 document.body.appendChild(textNode)
 
+const MARGIN_TOP = 5
+const marginNode = document.createElement('div')
+marginNode.innerHTML = 'node text'
+marginNode.style.marginTop = MARGIN_TOP + 'px'
+document.body.appendChild(marginNode)
+
 const hiddenNode = document.createElement('div')
 hiddenNode.innerHTML = 'node text'
 hiddenNode.style.display = 'none'
@@ -25,9 +31,15 @@ changingNode.style.position = 'relative'
 document.body.appendChild(changingNode)
 
 describe('get proper node dimensions', () => {
-  it('width should equal node offset width', () => {
-    const { width } = getNodeDimensions(textNode)
+  it('dimensions should equal node dimensions', () => {
+    const { width, height } = getNodeDimensions(textNode)
     expect(width).toEqual(textNode.offsetWidth)
+    expect(height).toEqual(textNode.offsetHeight)
+  });
+
+  it('when element has margin', () => {
+    const { height } = getNodeDimensions(marginNode, { margin: true })
+    expect(height).toEqual(marginNode.offsetHeight + MARGIN_TOP)
   });
 
   it('when element is hidden', () => {

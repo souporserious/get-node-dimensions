@@ -1,9 +1,11 @@
+import getMargin from './get-margin'
+
 export default function getCloneDimensions(node, options) {
   const { parentNode } = node
   const context = document.createElement('div')
   const clone = node.cloneNode(true)
   const style = getComputedStyle(node)
-  let rect, width, height
+  let rect, width, height, margin
 
   // give the node some context to measure off of
   // no height and hidden overflow hide node copy
@@ -41,11 +43,14 @@ export default function getCloneDimensions(node, options) {
   parentNode.removeChild(context)
 
   return {
-    width,
-    height,
-    top: rect.top,
-    right: rect.right,
-    bottom: rect.bottom,
-    left: rect.left,
+    rect: {
+      width,
+      height,
+      top: rect.top,
+      right: rect.right,
+      bottom: rect.bottom,
+      left: rect.left
+    },
+    margin: getMargin(style)
   }
 }
