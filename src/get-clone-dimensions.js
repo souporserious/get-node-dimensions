@@ -18,13 +18,13 @@ export default function getCloneDimensions(node, options) {
   clone.setAttribute('name', '')
 
   // set props to get a true dimension calculation
-  if (options.display || style.getPropertyValue('display') === 'none') {
+  if (options.display || (style && style.getPropertyValue('display') === 'none')) {
     clone.style.display = options.display || 'block'
   }
-  if (options.width || !parseInt(style.getPropertyValue('width'))) {
+  if (options.width || (style && !parseInt(style.getPropertyValue('width')))) {
     clone.style.width = options.width || 'auto'
   }
-  if (options.height || !parseInt(style.getPropertyValue('height'))) {
+  if (options.height || (style && !parseInt(style.getPropertyValue('height')))) {
     clone.style.height = options.height || 'auto'
   }
 
