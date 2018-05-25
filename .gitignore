@@ -10,6 +10,7 @@ node_modules
 npm-debug.log
 dist
 lib
+yarn.lock
 
 # General Files
 .sass-cache

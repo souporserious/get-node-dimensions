@@ -33,4 +33,5 @@ Returns element rect which includes `width`, `height`, `top`, `right`, `bottom`,
 
 - **margin** {bool}: Whether or not to account for element margins in calculation
 - **clone** {bool}: Whether or not to use a clone to measure. If no width/height found, the element will automatically be cloned in order to obtain proper dimensions
-- **display|width|height** {string}: sets respective clone property
+- **display|position|width|height** {string}: sets respective clone property
+- **actual** {bool}: create exact absolute copy in document body like jquery.actual
