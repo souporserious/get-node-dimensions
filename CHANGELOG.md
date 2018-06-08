@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.2.2
+
+Added option actual {bool}: create exact absolute copy in document body like jquery.actual
+
 ### 1.2.1
 
 Handle when `getComputedStyle` returns null [#9](https://github.com/souporserious/get-node-dimensions/pull/9)
